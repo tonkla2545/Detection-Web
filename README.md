@@ -1,12 +1,42 @@
-# React + Vite
+# 🦈 YOLOv8 Shark Detection Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+เว็บแอปพลิเคชันที่สามารถอัปโหลดภาพและตรวจจับฉลามด้วยโมเดล YOLOv8 ขนาดเล็ก พร้อมแสดงภาพผลลัพธ์การตรวจจับบนหน้าเว็บ
 
-Currently, two official plugins are available:
+## 📸 ความสามารถหลัก
+- อัปโหลดภาพผ่านหน้าเว็บ
+- ประมวลผลด้วย YOLOv8 (Nano model)
+- แสดงผลการตรวจจับวัตถุในรูปภาพ
+- ตรวจจับเฉพาะฉลามสายพันธุ์ต่อไปนี้:
+  - Blue Shark  
+  - Bull Shark  
+  - Mako Shark  
+  - Sand Tiger Shark  
+  - White Shark  
+  - Whitetip Shark  
+  - Hammerhead Shark  
+  - Nurse Shark  
+  - Tiger Shark  
+  - Whale Shark  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 📝 *หมายเหตุ: โมเดลที่ใช้เป็นเวอร์ชัน Nano (`yolov8n`) ซึ่งมีขนาดเล็กที่สุด เพื่อให้เหมาะสมกับการรันบน Server ฟรีเช่น Render หรือ Vercel*
 
-## Expanding the ESLint configuration
+## 🛠️ เทคโนโลยีที่ใช้
+- Frontend: React.js, TailwindCSS, Framer Motion, React Icons
+- Backend: Node.js, Express.js
+- AI Model: [Ultralytics YOLOv8 Nano](https://github.com/ultralytics/ultralytics)
+- Hosting: Vercel (Frontend), Render (Backend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 การติดตั้งและรันแอป (Local)
+### Front End
+```bash
+cd client
+npm install
+npm run dev
+
+### Back End
+```bash
+cd server
+npm install
+pip install ultralytics
+node index.js
+
